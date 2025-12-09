@@ -1,0 +1,311 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Dec  9 20:19:00 2025
+| Host         : trinh-Latitude-3540 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_methodology -file system_top_methodology_drc_routed.rpt -pb system_top_methodology_drc_routed.pb -rpx system_top_methodology_drc_routed.rpx
+| Design       : system_top
+| Device       : xczu2eg-sfvc784-1-e
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 49
++-----------+------------------+-------------------------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                                         | Violations |
++-----------+------------------+-------------------------------------------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                                                    | 1          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree                                  | 1          |
+| TIMING-54 | Critical Warning | Scoped false path, clock group or max delay datapath only constraint between clocks | 7          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                                        | 5          |
+| TIMING-9  | Warning          | Unknown CDC Logic                                                                   | 1          |
+| TIMING-10 | Warning          | Missing property on synchronizer                                                    | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                                                       | 25         |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects                                         | 5          |
+| CLKC-8    | Advisory         | BUFGCE_DIV with active CE or DIVIDE not 1 has BUFG driver                           | 2          |
+| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC                                          | 1          |
++-----------+------------------+-------------------------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock i_system_wrapper/system_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate pin i_system_wrapper/system_i/clk_wiz_0/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock i_system_wrapper/system_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_pl_2 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-54#1 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_div_sel_0_s and clk_pl_0 (see constraint position 155 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#2 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_div_sel_0_s and clk_pl_0 (see constraint position 162 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#3 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_div_sel_1_s and clk_pl_0 (see constraint position 155 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#4 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_div_sel_1_s and clk_pl_0 (see constraint position 162 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#5 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_pl_0 and clk_div_sel_0_s, clk_div_sel_1_s (see constraint position 152 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#6 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_pl_0 and clk_div_sel_0_s, clk_div_sel_1_s (see constraint position 180 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+TIMING-54#7 Critical Warning
+Scoped false path, clock group or max delay datapath only constraint between clocks  
+A scoped Max Delay Datapath Only timing constraint is set between clocks clk_pl_0 and clk_div_sel_0_s, clk_div_sel_1_s (see constraint position 184 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[0] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[1] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[2] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[3] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[4] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on rx_data_in_p[5] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on rx_frame_in_p relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on enable relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on tx_clk_out_n relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on tx_clk_out_p relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[0] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[1] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[2] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[3] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[4] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_n[5] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[0] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[1] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[2] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[3] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[4] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on tx_data_out_p[5] relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on tx_frame_out_n relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on tx_frame_out_p relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on txnrx relative to the rising and/or falling clock edge(s) of rx_clk.
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -filter {NAME =~ */sync_mode_d1_reg/D}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '11' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/trinh/sdr/project/fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_util_ad9361_tdd_sync_0/util_tdd_sync_constr.xdc (Line: 9)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -quiet -hier *reset_sync_in_reg*/PRE -filter {NAME =~ *i_reset_manager*}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '165' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/trinh/sdr/project/fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc (Line: 174)
+Related violations: <none>
+
+XDCB-5#3 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -quiet -hier *reset_sync_in_reg*/PRE -filter {NAME =~ *i_reset_manager*}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '166' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/trinh/sdr/project/fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_ad9361_adc_dma_0/system_axi_ad9361_adc_dma_0_constr.xdc (Line: 180)
+Related violations: <none>
+
+XDCB-5#4 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -quiet -hier *reset_sync_in_reg*/PRE -filter {NAME =~ *i_reset_manager*}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '187' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/trinh/sdr/project/fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_ad9361_dac_dma_0/system_axi_ad9361_dac_dma_0_constr.xdc (Line: 139)
+Related violations: <none>
+
+XDCB-5#5 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -quiet -hier *reset_sync_in_reg*/PRE -filter {NAME =~ *i_reset_manager*}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '188' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/trinh/sdr/project/fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_ad9361_dac_dma_0/system_axi_ad9361_dac_dma_0_constr.xdc (Line: 145)
+Related violations: <none>
+
+CLKC-8#1 Advisory
+BUFGCE_DIV with active CE or DIVIDE not 1 has BUFG driver  
+The BUFGCE_DIV cell i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0 i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_0/I pin (and CE is ACTIVE or BUFGCE_DIVIDE is not 1) is driven by BUFGCE clock buffer i_system_wrapper/system_i/axi_ad9361/inst/i_dev_if/i_clk/i_clk_gbuf. It should be reconnected in parallel to the driving clock buffer in order to reduce skew. Cascaded buffers introduce skew that can lead to difficult or impossible timing closure.
+Related violations: <none>
+
+CLKC-8#2 Advisory
+BUFGCE_DIV with active CE or DIVIDE not 1 has BUFG driver  
+The BUFGCE_DIV cell i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1 i_system_wrapper/system_i/util_ad9361_divclk/inst/clk_divide_sel_1/I pin (and CE is ACTIVE or BUFGCE_DIVIDE is not 1) is driven by BUFGCE clock buffer i_system_wrapper/system_i/axi_ad9361/inst/i_dev_if/i_clk/i_clk_gbuf. It should be reconnected in parallel to the driving clock buffer in order to reduce skew. Cascaded buffers introduce skew that can lead to difficult or impossible timing closure.
+Related violations: <none>
+
+CLKC-56#1 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell i_system_wrapper/system_i/clk_wiz_0/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) i_system_wrapper/system_i/sys_ps8/inst/buffer_pl_clk_2.PL_CLK_2_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+

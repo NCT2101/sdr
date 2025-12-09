@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_sys_rstgen_0/sim/system_sys_rstgen_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_sys_250m_rstgen_0/sim/system_sys_250m_rstgen_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_sys_500m_rstgen_0/sim/system_sys_500m_rstgen_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_cpu_interconnect_0/bd_0/ip/ip_1/sim/bd_24fc_psr_aclk_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_util_ad9361_divclk_reset_0/sim/system_util_ad9361_divclk_reset_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_hp1_interconnect_0/bd_0/ip/ip_1/sim/bd_31bd_psr_aclk_0.vhd" \
+"../../../../fmcomms2_zcu102.gen/sources_1/bd/system/ip/system_axi_hp2_interconnect_0/bd_0/ip/ip_1/sim/bd_c0fd_psr_aclk_0.vhd" \
+
+# Do not sort compile order
+nosort
