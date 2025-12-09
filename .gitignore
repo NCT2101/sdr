@@ -1,0 +1,65 @@
+###############################################################################
+# Vivado auto-generated folders (DO NOT COMMIT)
+###############################################################################
+
+sdr.cache/
+sdr.gen/
+sdr.hw/
+sdr.ip_user_files/
+sdr.runs/
+sdr.sim/
+
+# Vivado Source auto-generated subfolders
+sdr.srcs/sources_1/bd/*/hdl/
+sdr.srcs/sources_1/bd/*/ipshared/
+sdr.srcs/sources_1/bd/*/ip/
+sdr.srcs/sources_1/bd/*/util_*/*
+sdr.srcs/sim_1/
+sdr.srcs/utils_1/
+
+###############################################################################
+# Vivado output files
+###############################################################################
+
+*.jou
+*.log
+*.str
+*.wdb
+*.rpt
+*.html
+*.xml
+*.json
+
+# Bitstream and hardware images
+*.bit
+*.bin
+*.mmi
+*.ltx
+
+# Vivado backups
+*.xpr.backup
+*.xpr.user
+*.xpr.lck
+*.cache/
+*.temp/
+tmp/
+
+###############################################################################
+# Vitis / SDK (if later used)
+###############################################################################
+Release/
+Debug/
+.sdk/
+.metadata/
+Export/
+
+###############################################################################
+# OS / Editor junk
+###############################################################################
+*.swp
+*.swo
+*.tmp
+*~
+.vscode/
+.DS_Store
+
