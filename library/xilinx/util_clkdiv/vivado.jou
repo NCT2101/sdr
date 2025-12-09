@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Nov 12 19:14:06 2025
+# Process ID: 147741
+# Current directory: /home/trinh/hdl/library/xilinx/util_clkdiv
+# Command line: vivado -mode batch -source util_clkdiv_ip.tcl
+# Log file: /home/trinh/hdl/library/xilinx/util_clkdiv/vivado.log
+# Journal file: /home/trinh/hdl/library/xilinx/util_clkdiv/vivado.jou
+# Running On: trinh-Latitude-3540, OS: Linux, CPU Frequency: 1143.643 MHz, CPU Physical cores: 10, Host memory: 16439 MB
+#-----------------------------------------------------------
+source util_clkdiv_ip.tcl
