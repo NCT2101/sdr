@@ -5,7 +5,7 @@
 sdr.cache/
 sdr.gen/
 *.gen/
-
+sdr.srcs
 sdr.hw/
 sdr.ip_user_files/
 sdr.runs/
