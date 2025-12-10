@@ -8,6 +8,7 @@ sdr.hw/
 sdr.ip_user_files/
 sdr.runs/
 sdr.sim/
+sdr.srcs/
 
 # Vivado Source auto-generated subfolders
 sdr.srcs/sources_1/bd/*/hdl/
