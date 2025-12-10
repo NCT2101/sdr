@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="/home/trinh/sdr-dicom/project/sdr.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="/home/trinh/Documents/sdr/project/sdr.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a9e61ae45111467d9a62f7952c97313a"/>
@@ -44,7 +44,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="trenz.biz:te0820_2eg_1e:part0:2.0"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../.Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store"/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../.Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -69,13 +69,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="3"/>
-    <Option Name="WTModelSimExportSim" Val="3"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="3"/>
-    <Option Name="WTRivieraExportSim" Val="3"/>
-    <Option Name="WTActivehdlExportSim" Val="3"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
