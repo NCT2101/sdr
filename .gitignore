@@ -15,6 +15,7 @@ sdr.srcs/sources_1/bd/*/hdl/
 sdr.srcs/sources_1/bd/*/ipshared/
 sdr.srcs/sources_1/bd/*/ip/
 sdr.srcs/sources_1/bd/*/util_*/*
+sdr.srcs/sources_1/bd/system/ipshared
 
 sdr.srcs/sim_1/
 sdr.srcs/utils_1/
